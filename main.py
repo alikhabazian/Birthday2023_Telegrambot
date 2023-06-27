@@ -60,7 +60,7 @@ async def sabr(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.forward_message(
         chat_id=update.effective_chat.id,
         from_chat_id=684630739,
-        message_id=64#sabr
+        message_id=126#sabr
     )
 
     
@@ -129,7 +129,7 @@ if __name__ == '__main__':
         ],
         states={
          KEYBOARD:[
-            MessageHandler(filters.VOICE,shamim),
+            # MessageHandler(filters.VOICE,shamim),
             MessageHandler(filters.Regex(Levels[KEYBOARD]['answer']),shamim)
                 # CommandHandler('start', start),
                 # MessageHandler(filters.Regex(labbels[HOME][0]),ready_to_add_channel),
