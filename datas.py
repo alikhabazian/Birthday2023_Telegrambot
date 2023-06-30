@@ -2,8 +2,14 @@
     KEYBOARD,
     SHAMIM,
     DVORAK,
-    SABR
-) = range(4)
+    SABR,
+    FUCKYOU,
+    AZAT,
+    PHONE,
+    MEMOERY,
+    JADVAL,
+    LOOP
+) = range(10)
 
 
 Levels=[
@@ -55,5 +61,48 @@ Levels=[
         صبر داشته باش\n
         ''',#
         
+    },
+    {
+        'question':'''
+        It is hardest level in my opinion \n
+        stay calm and use your clues
+        ''',#
+        'answer':"fuck you"
+    },
+    {
+        'question':'''
+        Azat: \n
+        ازت خواهش میکنم\n
+        یه بار دیگه ام بمون\n
+        با رفتنت دلمو\n
+        توی سینم نسوزون\n
+        میسوزه دستای من\n
+        ولی دستای تو\n
+        میتونه گرمی دستامو آروم بکنه\n
+        با تو بودن میتونه\n
+        این راهو آسون بکنه\n
+        میکنه همه تنم\n
+        اسم تو را همش صدا\n
+        تو که نیستی\n
+        دل من تموم شب میره برات\n
+        میگیره قلب من آخر به خدا\n
+        '''
+    },
+    {
+        'question':'''
+        use keypad of your phone to call this number it is important: \n
+        936382 61827481 23215353 215343 216231 742193 4221717193 2243738142312193 91438142638281 742193 4232535363
+        ''',#
+    },
+    {
+        'question':'''
+        Send voice and tell about me a memory that make me happy :)
+        ''',#
+    },
+    {
+        'question':'''
+        Send me password:\n
+        ''',#
+        'answer':"black museum"
     },
 ]
