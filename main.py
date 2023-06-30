@@ -213,6 +213,10 @@ async def finish(update: Update, context: ContextTypes.DEFAULT_TYPE):
         chat_id=update.effective_chat.id,
         text="you have finished the game"
     )
+    await context.bot.send_message(
+        chat_id="-1001892648701",
+        text=f"{update.effective_chat.id} finish the game"
+    )
     return LOOP
 
 async def wrong(update: Update, context: ContextTypes.DEFAULT_TYPE):
