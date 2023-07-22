@@ -1,5 +1,5 @@
 from telegram import Update,ReplyKeyboardMarkup,constants
-from telegram.ext import filters, MessageHandler,ApplicationBuilder, ContextTypes, CommandHandler,ConversationHandler
+from telegram.ext import filters, MessageHandler,ApplicationBuilder, ContextTypes, CommandHandler,ConversationHandler,PicklePersistence
 from datas import *
 
 TOKEN='6183737223:AAFc8MK_2_Jrw8Oy6j360pZc-X7vxTo6puQ'
@@ -236,7 +236,8 @@ async def pr(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
 
 if __name__ == '__main__':
-    application = ApplicationBuilder().token(TOKEN).build()
+    persistence = PicklePersistence(filepath="conversationbot")
+    application = ApplicationBuilder().token(TOKEN).persistence(persistence).build()
     # admin_ord=MessageHandler(filters.Regex(r'^[0-9]{5,}![a-zA-Z]+$'),admin_order)
     menue_handler = ConversationHandler(
         entry_points=[
@@ -295,7 +296,10 @@ if __name__ == '__main__':
         #         CommandHandler('start', start),
         #         MessageHandler(filters.Document.ALL,income_file),
         #  ]
-        }
+
+        },
+        persistent=True,
+        name='puzzle'
     )
     application.add_handler(menue_handler)
     # application.add_handler(admin_ord)
